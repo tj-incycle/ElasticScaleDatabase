@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ElasticScaleDatabase.Database", "ElasticScaleDatabase.Database\ElasticScaleDatabase.Database.sqlproj", "{2496032E-ACBE-4700-898D-CD72D790D75D}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ElasticScaleDatabase.Database.Shard", "ElasticScaleDatabase.Database\ElasticScaleDatabase.Database.Shard.sqlproj", "{2496032E-ACBE-4700-898D-CD72D790D75D}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ElasticScaleDatabase.Database.ShardMapManager", "ElasticScaleDatabase.Database.ShardMapManager\ElasticScaleDatabase.Database.ShardMapManager.sqlproj", "{00F84E39-892F-4754-86C9-BCA9B0F88474}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,12 @@ Global
 		{2496032E-ACBE-4700-898D-CD72D790D75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2496032E-ACBE-4700-898D-CD72D790D75D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2496032E-ACBE-4700-898D-CD72D790D75D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{00F84E39-892F-4754-86C9-BCA9B0F88474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00F84E39-892F-4754-86C9-BCA9B0F88474}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00F84E39-892F-4754-86C9-BCA9B0F88474}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{00F84E39-892F-4754-86C9-BCA9B0F88474}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00F84E39-892F-4754-86C9-BCA9B0F88474}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00F84E39-892F-4754-86C9-BCA9B0F88474}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

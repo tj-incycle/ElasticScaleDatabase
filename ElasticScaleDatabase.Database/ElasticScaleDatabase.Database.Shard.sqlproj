@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>ElasticScaleDatabase.Database</Name>
+    <Name>ElasticScaleDatabase.Database.Shard</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{2496032e-acbe-4700-898d-cd72d790d75d}</ProjectGuid>
@@ -81,15 +81,11 @@
     <Folder Include="Views\Purchasing" />
     <Folder Include="Tables\Sales" />
     <Folder Include="Views\Sales" />
+    <Folder Include="Security\Schema" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Storage\AW2014FullTextCatalog.sql" />
     <Build Include="FullTextIndexes.sql" />
-    <Build Include="Security\Sales.sql" />
-    <Build Include="Security\Purchasing.sql" />
-    <Build Include="Security\Production.sql" />
-    <Build Include="Security\Person.sql" />
-    <Build Include="Security\HumanResources.sql" />
     <Build Include="ExtendedProperties.sql" />
     <Build Include="Programmability\Database Triggers\ddlDatabaseTriggerLog.sql" />
     <Build Include="Programmability\Functions\dbo\ufnGetAccountingEndDate.sql" />
@@ -212,6 +208,11 @@
     <Build Include="Views\Sales\vStoreWithContacts.sql" />
     <Build Include="Views\Sales\vStoreWithDemographics.sql" />
     <Build Include="Programmability\XMLSchemaCollections\StoreSurveySchemaCollection.sql" />
+    <Build Include="Security\Schema\Sales.sql" />
+    <Build Include="Security\Schema\HumanResources.sql" />
+    <Build Include="Security\Schema\Person.sql" />
+    <Build Include="Security\Schema\Production.sql" />
+    <Build Include="Security\Schema\Purchasing.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Sales\ShoppingCartItem.sql" />
