@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>ElasticScaleDatabase.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{2496032e-acbe-4700-898d-cd72d790d75d}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>ElasticScaleDatabase.Database</RootNamespace>
+    <AssemblyName>ElasticScaleDatabase.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Storage\" />
+    <Folder Include="Security\" />
+    <Folder Include="Programmability" />
+    <Folder Include="Programmability\Database Triggers" />
+    <Folder Include="Programmability\Functions" />
+    <Folder Include="Programmability\Functions\dbo" />
+    <Folder Include="Programmability\Stored Procedures" />
+    <Folder Include="Programmability\Stored Procedures\dbo" />
+    <Folder Include="Tables" />
+    <Folder Include="Tables\dbo" />
+    <Folder Include="Programmability\User Defined Types" />
+    <Folder Include="Programmability\Stored Procedures\HumanResources" />
+    <Folder Include="Tables\HumanResources" />
+    <Folder Include="Views" />
+    <Folder Include="Views\HumanResources" />
+    <Folder Include="Programmability\XMLSchemaCollections" />
+    <Folder Include="Tables\Person" />
+    <Folder Include="Views\Person" />
+    <Folder Include="Tables\Production" />
+    <Folder Include="Views\Production" />
+    <Folder Include="Tables\Purchasing" />
+    <Folder Include="Views\Purchasing" />
+    <Folder Include="Tables\Sales" />
+    <Folder Include="Views\Sales" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Storage\AW2014FullTextCatalog.sql" />
+    <Build Include="FullTextIndexes.sql" />
+    <Build Include="Security\Sales.sql" />
+    <Build Include="Security\Purchasing.sql" />
+    <Build Include="Security\Production.sql" />
+    <Build Include="Security\Person.sql" />
+    <Build Include="Security\HumanResources.sql" />
+    <Build Include="ExtendedProperties.sql" />
+    <Build Include="Programmability\Database Triggers\ddlDatabaseTriggerLog.sql" />
+    <Build Include="Programmability\Functions\dbo\ufnGetAccountingEndDate.sql" />
+    <Build Include="Programmability\Functions\dbo\ufnGetAccountingStartDate.sql" />
+    <Build Include="Programmability\Functions\dbo\ufnGetContactInformation.sql" />
+    <Build Include="Programmability\Functions\dbo\ufnGetDocumentStatusText.sql" />
+    <Build Include="Programmability\Functions\dbo\ufnGetProductDealerPrice.sql" />
+    <Build Include="Programmability\Functions\dbo\ufnGetProductListPrice.sql" />
+    <Build Include="Programmability\Functions\dbo\ufnGetProductStandardCost.sql" />
+    <Build Include="Programmability\Functions\dbo\ufnGetPurchaseOrderStatusText.sql" />
+    <Build Include="Programmability\Functions\dbo\ufnGetSalesOrderStatusText.sql" />
+    <Build Include="Programmability\Functions\dbo\ufnGetStock.sql" />
+    <Build Include="Programmability\Functions\dbo\ufnLeadingZeros.sql" />
+    <Build Include="Programmability\Stored Procedures\dbo\uspGetBillOfMaterials.sql" />
+    <Build Include="Programmability\Stored Procedures\dbo\uspGetEmployeeManagers.sql" />
+    <Build Include="Programmability\Stored Procedures\dbo\uspGetManagerEmployees.sql" />
+    <Build Include="Programmability\Stored Procedures\dbo\uspGetWhereUsedProductID.sql" />
+    <Build Include="Programmability\Stored Procedures\dbo\uspLogError.sql" />
+    <Build Include="Programmability\Stored Procedures\dbo\uspPrintError.sql" />
+    <Build Include="Programmability\Stored Procedures\dbo\uspSearchCandidateResumes.sql" />
+    <Build Include="Tables\dbo\ErrorLog.sql" />
+    <Build Include="Tables\dbo\AWBuildVersion.sql" />
+    <Build Include="Tables\dbo\DatabaseLog.sql" />
+    <Build Include="Programmability\User Defined Types\AccountNumber.sql" />
+    <Build Include="Programmability\User Defined Types\Flag.sql" />
+    <Build Include="Programmability\User Defined Types\Name.sql" />
+    <Build Include="Programmability\User Defined Types\NameStyle.sql" />
+    <Build Include="Programmability\User Defined Types\OrderNumber.sql" />
+    <Build Include="Programmability\User Defined Types\Phone.sql" />
+    <Build Include="Programmability\Stored Procedures\HumanResources\uspUpdateEmployeeHireInfo.sql" />
+    <Build Include="Programmability\Stored Procedures\HumanResources\uspUpdateEmployeeLogin.sql" />
+    <Build Include="Programmability\Stored Procedures\HumanResources\uspUpdateEmployeePersonalInfo.sql" />
+    <Build Include="Tables\HumanResources\Department.sql" />
+    <Build Include="Tables\HumanResources\Employee.sql" />
+    <Build Include="Tables\HumanResources\EmployeeDepartmentHistory.sql" />
+    <Build Include="Tables\HumanResources\EmployeePayHistory.sql" />
+    <Build Include="Tables\HumanResources\JobCandidate.sql" />
+    <Build Include="Tables\HumanResources\Shift.sql" />
+    <Build Include="Views\HumanResources\vEmployee.sql" />
+    <Build Include="Views\HumanResources\vEmployeeDepartment.sql" />
+    <Build Include="Views\HumanResources\vEmployeeDepartmentHistory.sql" />
+    <Build Include="Views\HumanResources\vJobCandidate.sql" />
+    <Build Include="Views\HumanResources\vJobCandidateEducation.sql" />
+    <Build Include="Views\HumanResources\vJobCandidateEmployment.sql" />
+    <Build Include="Programmability\XMLSchemaCollections\HRResumeSchemaCollection.sql" />
+    <Build Include="Tables\Person\Address.sql" />
+    <Build Include="Tables\Person\AddressType.sql" />
+    <Build Include="Tables\Person\BusinessEntity.sql" />
+    <Build Include="Tables\Person\BusinessEntityAddress.sql" />
+    <Build Include="Tables\Person\BusinessEntityContact.sql" />
+    <Build Include="Tables\Person\ContactType.sql" />
+    <Build Include="Tables\Person\CountryRegion.sql" />
+    <Build Include="Tables\Person\EmailAddress.sql" />
+    <Build Include="Tables\Person\Password.sql" />
+    <Build Include="Tables\Person\Person.sql" />
+    <Build Include="Tables\Person\PersonPhone.sql" />
+    <Build Include="Tables\Person\PhoneNumberType.sql" />
+    <Build Include="Tables\Person\StateProvince.sql" />
+    <Build Include="Views\Person\vAdditionalContactInfo.sql" />
+    <Build Include="Views\Person\vStateProvinceCountryRegion.sql" />
+    <Build Include="Programmability\XMLSchemaCollections\AdditionalContactInfoSchemaCollection.sql" />
+    <Build Include="Programmability\XMLSchemaCollections\IndividualSurveySchemaCollection.sql" />
+    <Build Include="Tables\Production\BillOfMaterials.sql" />
+    <Build Include="Tables\Production\Culture.sql" />
+    <Build Include="Tables\Production\Document.sql" />
+    <Build Include="Tables\Production\Illustration.sql" />
+    <Build Include="Tables\Production\Location.sql" />
+    <Build Include="Tables\Production\Product.sql" />
+    <Build Include="Tables\Production\ProductCategory.sql" />
+    <Build Include="Tables\Production\ProductCostHistory.sql" />
+    <Build Include="Tables\Production\ProductDescription.sql" />
+    <Build Include="Tables\Production\ProductDocument.sql" />
+    <Build Include="Tables\Production\ProductInventory.sql" />
+    <Build Include="Tables\Production\ProductListPriceHistory.sql" />
+    <Build Include="Tables\Production\ProductModel.sql" />
+    <Build Include="Tables\Production\ProductModelIllustration.sql" />
+    <Build Include="Tables\Production\ProductModelProductDescriptionCulture.sql" />
+    <Build Include="Tables\Production\ProductPhoto.sql" />
+    <Build Include="Tables\Production\ProductProductPhoto.sql" />
+    <Build Include="Tables\Production\ProductReview.sql" />
+    <Build Include="Tables\Production\ProductSubcategory.sql" />
+    <Build Include="Tables\Production\ScrapReason.sql" />
+    <Build Include="Tables\Production\TransactionHistory.sql" />
+    <Build Include="Tables\Production\TransactionHistoryArchive.sql" />
+    <Build Include="Tables\Production\UnitMeasure.sql" />
+    <Build Include="Tables\Production\WorkOrder.sql" />
+    <Build Include="Tables\Production\WorkOrderRouting.sql" />
+    <Build Include="Views\Production\vProductAndDescription.sql" />
+    <Build Include="Views\Production\vProductModelCatalogDescription.sql" />
+    <Build Include="Views\Production\vProductModelInstructions.sql" />
+    <Build Include="Programmability\XMLSchemaCollections\ManuInstructionsSchemaCollection.sql" />
+    <Build Include="Programmability\XMLSchemaCollections\ProductDescriptionSchemaCollection.sql" />
+    <Build Include="Tables\Purchasing\ProductVendor.sql" />
+    <Build Include="Tables\Purchasing\PurchaseOrderDetail.sql" />
+    <Build Include="Tables\Purchasing\PurchaseOrderHeader.sql" />
+    <Build Include="Tables\Purchasing\ShipMethod.sql" />
+    <Build Include="Tables\Purchasing\Vendor.sql" />
+    <Build Include="Views\Purchasing\vVendorWithAddresses.sql" />
+    <Build Include="Views\Purchasing\vVendorWithContacts.sql" />
+    <Build Include="Tables\Sales\CountryRegionCurrency.sql" />
+    <Build Include="Tables\Sales\CreditCard.sql" />
+    <Build Include="Tables\Sales\Currency.sql" />
+    <Build Include="Tables\Sales\CurrencyRate.sql" />
+    <Build Include="Tables\Sales\Customer.sql" />
+    <Build Include="Tables\Sales\PersonCreditCard.sql" />
+    <Build Include="Tables\Sales\SalesOrderDetail.sql" />
+    <Build Include="Tables\Sales\SalesOrderHeader.sql" />
+    <Build Include="Tables\Sales\SalesOrderHeaderSalesReason.sql" />
+    <Build Include="Tables\Sales\SalesPerson.sql" />
+    <Build Include="Tables\Sales\SalesPersonQuotaHistory.sql" />
+    <Build Include="Tables\Sales\SalesReason.sql" />
+    <Build Include="Tables\Sales\SalesTaxRate.sql" />
+    <Build Include="Tables\Sales\SalesTerritory.sql" />
+    <Build Include="Tables\Sales\SalesTerritoryHistory.sql" />
+    <Build Include="Views\Sales\vIndividualCustomer.sql" />
+    <Build Include="Views\Sales\vPersonDemographics.sql" />
+    <Build Include="Views\Sales\vSalesPerson.sql" />
+    <Build Include="Views\Sales\vSalesPersonSalesByFiscalYears.sql" />
+    <Build Include="Views\Sales\vStoreWithAddresses.sql" />
+    <Build Include="Views\Sales\vStoreWithContacts.sql" />
+    <Build Include="Views\Sales\vStoreWithDemographics.sql" />
+    <Build Include="Programmability\XMLSchemaCollections\StoreSurveySchemaCollection.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Sales\ShoppingCartItem.sql" />
+    <Build Include="Tables\Sales\SpecialOffer.sql" />
+    <Build Include="Tables\Sales\SpecialOfferProduct.sql" />
+    <Build Include="Tables\Sales\Store.sql" />
+  </ItemGroup>
+</Project>
