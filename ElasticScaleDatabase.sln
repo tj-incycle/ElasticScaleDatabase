@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ElasticScaleDatabase.Database.Shard", "ElasticScaleDatabase.Database\ElasticScaleDatabase.Database.Shard.sqlproj", "{2496032E-ACBE-4700-898D-CD72D790D75D}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ElasticScaleDatabase.Database.Shard", "ElasticScaleDatabase.Database.Shard\ElasticScaleDatabase.Database.Shard.sqlproj", "{2496032E-ACBE-4700-898D-CD72D790D75D}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ElasticScaleDatabase.Database.ShardMapManager", "ElasticScaleDatabase.Database.ShardMapManager\ElasticScaleDatabase.Database.ShardMapManager.sqlproj", "{00F84E39-892F-4754-86C9-BCA9B0F88474}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElasticScaleDatabase.Core", "ElasticScaleDatabase.Core\ElasticScaleDatabase.Core.csproj", "{CF85ADE3-A877-4E09-9D5E-DBB8285AFE9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElasticScaleDatabase.WebApi", "ElasticScaleDatabase.WebApi\ElasticScaleDatabase.WebApi.csproj", "{2A3238E3-68EC-4A27-86DE-4804A38DDC67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{CF85ADE3-A877-4E09-9D5E-DBB8285AFE9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF85ADE3-A877-4E09-9D5E-DBB8285AFE9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF85ADE3-A877-4E09-9D5E-DBB8285AFE9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A3238E3-68EC-4A27-86DE-4804A38DDC67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A3238E3-68EC-4A27-86DE-4804A38DDC67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A3238E3-68EC-4A27-86DE-4804A38DDC67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A3238E3-68EC-4A27-86DE-4804A38DDC67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

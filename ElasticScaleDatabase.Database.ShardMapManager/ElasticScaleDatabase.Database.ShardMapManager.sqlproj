@@ -57,7 +57,6 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="__ShardManagement\" />
     <Folder Include="Security\" />
     <Folder Include="Programmability" />
     <Folder Include="Tables" />
@@ -67,6 +66,7 @@
     <Folder Include="Programmability\Stored Procedures\__ShardManagement" />
     <Folder Include="Security\Schemas" />
     <Folder Include="Tables\__ShardManagement" />
+    <Folder Include="Tables\dbo" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Programmability\Functions\__ShardManagement\fnGetStoreVersionMajorGlobal.sql" />
@@ -99,6 +99,7 @@
     <Build Include="Security\Schemas\__ShardManagement.sql" />
     <Build Include="Tables\__ShardManagement\ShardsGlobal.sql" />
     <Build Include="Tables\__ShardManagement\OperationsLogGlobal.sql" />
+    <Build Include="Tables\dbo\Customers.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\__ShardManagement\ShardedDatabaseSchemaInfosGlobal.sql" />

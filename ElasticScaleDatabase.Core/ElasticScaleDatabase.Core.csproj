@@ -38,8 +38,13 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Azure.SqlDatabase.ElasticScale.Client, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.SqlDatabase.ElasticScale.Client.1.3.3\lib\net45\Microsoft.Azure.SqlDatabase.ElasticScale.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -51,79 +56,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\HumanResources\Department.cs" />
-    <Compile Include="Entities\HumanResources\Employee.cs" />
-    <Compile Include="Entities\HumanResources\EmployeeDepartmentHistory.cs" />
-    <Compile Include="Entities\HumanResources\EmployeePayHistory.cs" />
-    <Compile Include="Entities\HumanResources\HumanResourcesContext.cs" />
-    <Compile Include="Entities\HumanResources\JobCandidate.cs" />
-    <Compile Include="Entities\HumanResources\Shift.cs" />
-    <Compile Include="Entities\People\Address.cs" />
-    <Compile Include="Entities\People\AddressType.cs" />
-    <Compile Include="Entities\People\BusinessEntity.cs" />
-    <Compile Include="Entities\People\BusinessEntityAddress.cs" />
-    <Compile Include="Entities\People\BusinessEntityContact.cs" />
-    <Compile Include="Entities\People\ContactType.cs" />
-    <Compile Include="Entities\People\CountryRegion.cs" />
-    <Compile Include="Entities\People\EmailAddress.cs" />
-    <Compile Include="Entities\People\Password.cs" />
-    <Compile Include="Entities\People\PeopleContext.cs" />
-    <Compile Include="Entities\People\Person.cs" />
-    <Compile Include="Entities\People\PersonPhone.cs" />
-    <Compile Include="Entities\People\PhoneNumberType.cs" />
-    <Compile Include="Entities\People\StateProvince.cs" />
-    <Compile Include="Entities\Production\BillOfMaterial.cs" />
-    <Compile Include="Entities\Production\Culture.cs" />
-    <Compile Include="Entities\Production\Illustration.cs" />
-    <Compile Include="Entities\Production\Location.cs" />
-    <Compile Include="Entities\Production\Product.cs" />
-    <Compile Include="Entities\Production\ProductCategory.cs" />
-    <Compile Include="Entities\Production\ProductCostHistory.cs" />
-    <Compile Include="Entities\Production\ProductDescription.cs" />
-    <Compile Include="Entities\Production\ProductDocument.cs" />
-    <Compile Include="Entities\Production\ProductInventory.cs" />
-    <Compile Include="Entities\Production\ProductionContext.cs" />
-    <Compile Include="Entities\Production\ProductListPriceHistory.cs" />
-    <Compile Include="Entities\Production\ProductModel.cs" />
-    <Compile Include="Entities\Production\ProductModelIllustration.cs" />
-    <Compile Include="Entities\Production\ProductModelProductDescriptionCulture.cs" />
-    <Compile Include="Entities\Production\ProductPhoto.cs" />
-    <Compile Include="Entities\Production\ProductProductPhoto.cs" />
-    <Compile Include="Entities\Production\ProductReview.cs" />
-    <Compile Include="Entities\Production\ProductSubcategory.cs" />
-    <Compile Include="Entities\Production\ScrapReason.cs" />
-    <Compile Include="Entities\Production\TransactionHistory.cs" />
-    <Compile Include="Entities\Production\TransactionHistoryArchive.cs" />
-    <Compile Include="Entities\Production\UnitMeasure.cs" />
-    <Compile Include="Entities\Production\WorkOrder.cs" />
-    <Compile Include="Entities\Production\WorkOrderRouting.cs" />
-    <Compile Include="Entities\Purchasing\ProductVendor.cs" />
-    <Compile Include="Entities\Purchasing\PurchaseOrderDetail.cs" />
-    <Compile Include="Entities\Purchasing\PurchaseOrderHeader.cs" />
-    <Compile Include="Entities\Purchasing\PurchasingContext.cs" />
-    <Compile Include="Entities\Purchasing\ShipMethod.cs" />
-    <Compile Include="Entities\Purchasing\Vendor.cs" />
-    <Compile Include="Entities\Sales\CountryRegionCurrency.cs" />
-    <Compile Include="Entities\Sales\CreditCard.cs" />
-    <Compile Include="Entities\Sales\Currency.cs" />
-    <Compile Include="Entities\Sales\CurrencyRate.cs" />
-    <Compile Include="Entities\Sales\Customer.cs" />
-    <Compile Include="Entities\Sales\PersonCreditCard.cs" />
-    <Compile Include="Entities\Sales\SalesContext.cs" />
-    <Compile Include="Entities\Sales\SalesOrderDetail.cs" />
-    <Compile Include="Entities\Sales\SalesOrderHeader.cs" />
-    <Compile Include="Entities\Sales\SalesOrderHeaderSalesReason.cs" />
-    <Compile Include="Entities\Sales\SalesPerson.cs" />
-    <Compile Include="Entities\Sales\SalesPersonQuotaHistory.cs" />
-    <Compile Include="Entities\Sales\SalesReason.cs" />
-    <Compile Include="Entities\Sales\SalesTaxRate.cs" />
-    <Compile Include="Entities\Sales\SalesTerritory.cs" />
-    <Compile Include="Entities\Sales\SalesTerritoryHistory.cs" />
-    <Compile Include="Entities\Sales\ShoppingCartItem.cs" />
-    <Compile Include="Entities\Sales\SpecialOffer.cs" />
-    <Compile Include="Entities\Sales\SpecialOfferProduct.cs" />
-    <Compile Include="Entities\Sales\Store.cs" />
+    <Compile Include="Entities\Location.cs" />
+    <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\OrderLineItem.cs" />
+    <Compile Include="Entities\OrdersContext.cs" />
+    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sharding\ShardManagement.cs" />
+    <Compile Include="Sharding\ShardMapDatabaseNotFoundException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
