@@ -57,7 +57,7 @@ namespace ElasticScaleDatabase.Core.Sharding
 
             if (!shardMapDatabaseExists)
             {
-                _shardMapManager = ShardMapManagerFactory.CreateSqlShardMapManager(GetShardMapManagerConnectionString(), ShardMapManagerCreateMode.KeepExisting);
+                _shardMapManager = ShardMapManagerFactory.CreateSqlShardMapManager(GetShardMapManagerConnectionString(), ShardMapManagerCreateMode.ReplaceExisting);
             }
 
             bool listShardMapExists = _shardMapManager.TryGetListShardMap(ShardMapName, out _shardMap);
